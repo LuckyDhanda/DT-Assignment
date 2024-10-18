@@ -1,0 +1,520 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+    font-size: 15px;
+    letter-spacing: 0.4px;
+    /* overflow-x: hidden;  */
+    
+}
+
+
+/* Navbar */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 8px 35px;
+    width: 100%;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo{
+    height: 45px;
+}
+
+.navbar ul {
+    list-style-type: none;
+}
+  
+.navbar li {
+    float: left;
+    padding: 16px;
+}
+
+.image-container {
+    position: relative; 
+}
+
+.first-image {
+    display: block; 
+    width: 100%; 
+}
+
+.second-image {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    z-index: 1;
+}
+
+.ellipsis {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+}
+
+.ellipsis span {
+    display: block; 
+    width: 8px;
+    height: 8px; 
+    background-color: #3683F0; 
+    border-radius: 50%; 
+    margin: 2px 0; 
+}
+
+
+
+/* main-content */
+body {
+    display: flex; 
+    flex-direction: column; 
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+
+.container {
+    display: flex;
+    flex-grow: 1; 
+    width: 100%; 
+}
+
+.left-aside {
+    width: 8vw;
+    height: 700px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    box-shadow: 0 4px 4px #00000040, 0 -4px 4px #00000040;
+    position: fixed;
+    z-index: 100;
+    background-color: white;
+}
+
+.left-aside.expanded {
+    width: 25vw;
+    position: fixed;
+    background: white;
+    z-index: 2
+}
+
+.aside-header {
+    background-color: black; 
+    color: white; 
+    width: 100%; 
+    height: 35px;
+    padding: 20px; 
+    border-radius: 0px 30px 0 0; 
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.aside-header-icon {
+    position: absolute;
+    right: 12px;
+    top: 55%;
+    transform: translateY(-50%);
+}
+
+.aside-header-icon img {
+    width: 25px;
+    height: auto; 
+}
+
+.hidden{
+    display: none;
+}
+
+.aside-para p{
+    color: #0029FF;
+    padding: 15px 20px;
+    border: 1px, solid, #0029FF;
+    border-radius: 10px;
+    font-size: 20px;
+    position: absolute;
+    top: 70px;
+    left: 30px;
+}
+
+.aside-content {
+    display: none;  
+    padding: 20px;
+}
+
+.left-aside.expanded .aside-content {
+    display: block; 
+}
+
+.left-aside.expanded .aside-para {
+    display: none; 
+}
+
+.aside-list {
+    list-style-type: disc; 
+    margin-left: 20px; 
+}
+
+.aside-heading {
+    padding-bottom: 20px; 
+}
+
+.aside-list li {
+    margin-bottom: 5px; /* Add space between list items */
+}
+
+.aside-list li strong {
+    font-weight: bold;
+}
+
+
+.main-content{
+    padding: 20px 55px;
+    flex-grow: 1;
+    margin: 5px 50px 20px 120px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 26px;
+    color: #0029FF;
+}
+
+.submit-task {
+    background-color: #0029FF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.intro {
+    margin-top: 30px;
+    padding: 25px;
+    border-radius: 5px;
+    background-color: #E9ECEF;
+    
+}
+
+.intro h3{
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+/* Cards */
+.grid-layout {
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px; 
+    margin-top: 50px;
+}
+
+.card {
+    font-family: Open Sans;
+    box-shadow: 0 4px 4px #00000040, 0 -4px 4px #00000040;
+    height: 600px; /* Fixed height for the boxes */
+    display: flex; /* Center the content */
+    flex-direction: column; /* Stack header and content vertically */
+    justify-content: flex-start; /* Start with header on top */
+    border-radius: 15px; /* Rounded corners */
+}
+
+.card-header {
+    background-color: black; 
+    color: white; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    width: 100%; 
+    padding: 10px; 
+    border-radius: 10px 10px 0 0; 
+    position: relative;
+    font-size: 15px;
+}
+
+.card-heading {
+    flex: 1;                  
+    text-align: center;       
+}
+
+.icon {
+    position: absolute;       
+    right: 20px;             
+    top: 50%;                
+    transform: translateY(-50%); 
+}
+
+.icon img {
+    width: 17px;  
+    height: auto; 
+}
+
+.card p{
+    margin: 25px 20px;
+}
+
+.card .img{
+    width: 100%;
+}
+
+
+/* right aside */
+
+.right-aside {
+    margin-top: 20px;
+    width: 180px;   
+    height: fit-content;            
+    border-radius: 30px 0 0 30px;
+    box-shadow: 0 4px 4px #00000040, 0 -4px 4px #00000040;
+}
+
+.logoReplacement {
+    font-size: xx-large;
+    padding-bottom: 15px;
+}
+
+.notice-text {
+    width: 40%;                  
+    background-color: black;     
+    color: white;                
+    display: flex;               
+    align-items: center;         
+    flex-direction: column;     
+    padding: 20px;               
+    border-radius: 30px 0 0 30px; 
+    padding-bottom: 35px;
+}
+
+.notice-text span{
+    margin-bottom: 10px;
+}
+
+
+/* Card 2 */
+.thread-heading{
+    padding: 4px;
+    font-size:x-large;
+    background-color: rgb(254, 254, 249);
+    border-top: 1.6px solid rgb(210, 209, 209);
+    border-bottom: 0.5px solid rgb(210, 209, 209);
+}
+
+.thread-heading span{
+    margin-right: 50px;
+}
+
+.thread-main{
+    padding: 25px 22px;
+}
+
+.sub-threads{
+    display: flex;
+    justify-content: center;
+    gap: 22px; 
+}
+
+.sub-thread-card{
+    width: -webkit-fill-available;
+    border-radius: 10px;
+    box-shadow: -1px 0 3px #e0e0e0, 1px 0 3px #e0e0e0, 0 4px 5px #e0e0e0;
+    background-color: rgb(240, 240, 240);
+    border: 0.5px solid rgb(224, 224, 224);
+    
+}
+
+.sub-thread-card-heading{
+    margin: 5px;
+}
+
+.sub-thread-card textarea{
+    width: 100%;
+    border: 0.5px solid rgb(224, 224, 224); 
+    border-radius: 10px;
+    padding: 10px; 
+    outline: none; 
+    resize: none;
+    margin: 0px 0 -7px;
+    height: 8vh;
+}
+
+.sub-thread-icons{
+    margin-right: 5px;
+}
+
+.sub-thread-options{
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px 0;
+    margin: 15px 0;
+}
+
+.sub-thread-options select{
+    border: none;
+    border-radius: 5px;
+    box-shadow: -2px 2px 5px rgba(128, 128, 128, 0.5), 2px 2px 5px rgba(128, 128, 128, 0.5);
+    padding: 8px 0;
+    width: 110px;
+    letter-spacing: 0px;
+    margin-left: 10px;
+}
+
+.sub-thread-button{
+    background-color: #0029FF;
+    color: white;
+    padding: 8px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px 0 15px 0;
+}
+
+
+/* Card 3 */
+
+.card3-main {
+    padding: 25px 22px 0px 22px;
+    border-top: 1.6px solid rgb(210, 209, 209);
+    display: flex;
+    flex-direction: column; /* Ensure the content stacks vertically */
+    height: 100%; /* Full height of the parent container */
+}
+
+.card3-main h2{
+    margin-bottom: 15px;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    height: 100%; 
+}
+
+article input[type=text] {
+    border: none;
+    width: 100%;
+    box-shadow: -1px 0 3px #e0e0e0, 1px 0 3px #e0e0e0, 0 4px 5px #e0e0e0;
+    padding: 15px;
+}
+
+.menu-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    box-shadow: -1px 0 3px #e0e0e0, 1px 0 3px #e0e0e0, 0 4px 5px #e0e0e0;
+    padding: 15px;
+}
+
+.menu-items {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 10px;
+}
+
+.menu-items span {
+    margin-right: 7px;
+    white-space: nowrap;
+}
+
+.ellipsis {
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+
+article textarea {
+    border: none;
+    width: 100%;
+    flex-grow: 1; 
+    border: 0.5px solid rgb(224, 224, 224);
+    box-shadow: -5px 0 10px #e0e0e0, 1px 0 3px #e0e0e0, 0 4px 5px #e0e0e0;
+    padding: 10px;
+    outline: none;
+    resize: none;
+    
+}
+
+
+/* Card 4 */
+.card4-main{
+    border-top: 1.6px solid rgb(210, 209, 209);
+    padding: 0 22px 0px 22px;
+    height: 100%
+}
+
+.card4-intro-heading{
+    background-color: #F2F2F2;
+    padding: 12px;
+
+}
+.card4-intro-heading span{
+    margin-right: 12px;
+}
+
+.card4-main-intro-desc {
+    position: relative;
+}
+
+.seeMore {
+    position: relative; 
+    left: 350px;
+    margin-bottom: 30px;
+}
+
+.card4-thread-heading, .card4-example-heading{
+    padding: 11px;
+    border: 1.6px solid rgb(210, 209, 209);;
+}
+
+.card4-example{
+    margin-left: 50px;
+}
+
+.card4-eaxmple-desc{
+    margin-top: 15px;
+}
+
+
+/* botton right links */
+
+.extra-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    right: 2vw;
+    bottom: 0;
+}
+
+.icons {
+    background-image: url('/img/Ellipse 198.png');
+    background-position: center; 
+    margin-bottom: 10px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    border-radius: 50%; 
+    width: 50px; 
+    height: 50px; 
+    /* height: 70vh; */
+}
+
+.icons img {
+    width: 70%; 
+    height: auto; 
+}
+
+
+
